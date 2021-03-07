@@ -1,0 +1,134 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.registration {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+  }
+
+  &__block {
+    display: flex;
+    flex-flow: column;
+    width: 47%;
+  }
+
+  &__subtitle {
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #868685;
+    color: inherit;
+    display: block;
+    font-family: FuturaFuturis, sans-serif;
+    font-size: 1.2rem;
+    outline: none;
+    padding: .6rem 0 .4rem 0;
+    width: 100%;
+  }
+
+  &__input-checkbox {
+    margin: 0 .3rem 0 0;
+  }
+
+  &__input_without-border {
+    border: none;
+  }
+
+  &__checkbox {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+
+  &__red {
+    color: #ff0000;
+    font-family: DIN Pro-Black, sans-serif;
+  }
+
+  &__text {
+    font-size: .8rem;
+  }
+
+  &__link {
+    color: #ffd900;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &__password {
+    align-items: center;
+    border-bottom: 1px solid #868685;
+    display: flex;
+  }
+
+  &__eye:hover {
+    cursor: pointer;
+  }
+
+  &__button {
+    align-self: flex-end;
+    display: block;
+    margin-top: 5rem;
+    width: 50%;
+  }
+}
+
+.result {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  width: 100%;
+
+  &__block {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  &__title {
+    font-family: DIN Pro-Black, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    font-size: 3rem;
+
+    &_check {
+      color: green;
+    }
+
+    &_error {
+      color: red;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    width: 200px;
+  }
+}

@@ -1,0 +1,18 @@
+.event-not-found {
+  align-items: center;
+  display: flex;
+  color: red;
+  flex-flow: column;
+  justify-content: space-evenly;
+  height: 300px;
+  width: 100%;
+
+  &__title {
+    font-family: DIN Pro-Black, sans-serif;
+    font-size: 2rem;
+  }
+
+  &__icon {
+    font-size: 4rem;
+  }
+}

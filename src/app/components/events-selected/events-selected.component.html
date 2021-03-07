@@ -1,0 +1,54 @@
+<h2 class="events-selected__title title"
+  routerLink="/events">
+  events
+</h2>
+<section class="events-selected"
+*ngIf="!eventsService.isLoadingEvents && eventsService.isEventFound">
+  <app-event-main
+  class="events-selected__event"
+  [eventName]="eventsService.selectedEvent ? eventsService.selectedEvent.eventName : ''"
+  [artistName]="eventsService.selectedEvent ? eventsService.selectedEvent.artist : ''"
+  [eventImages]="eventsService.selectedEvent ? eventsService.selectedEvent.images : []"
+  [eventStart]="eventsService.selectedEvent ? eventsService.selectedEvent.eventStart : 0"
+  [style.cursor]="'default'"
+  [style.height]="'400px'"
+  [style.opacity]="'1'"
+  ></app-event-main>
+  <article class="info">
+    <h3 class="info__title">
+      {{ eventsService.selectedEvent ? eventsService.selectedEvent.artist : '' }}
+    </h3>
+    <p class="info__description">
+      {{ eventsService.selectedEvent ? eventsService.selectedEvent.description : '' }}
+    </p>
+    <div class="info__block">
+      <span class="info__block-item">Date:</span>
+      <span class="info__block-item info__block-item_yellow">
+        {{ eventsService.selectedEvent ? (eventsService.selectedEvent.eventStart | date:'d MMMM y') : ''}}
+      </span>
+      <i class="info__block-item fa fa-calendar"></i>
+      <span class="info__block-item">
+        {{ eventsService.selectedEvent ? (eventsService.selectedEvent.eventStart | date:'HH:mm') : '' }}
+      </span>
+    </div>
+    <div class="info__block">
+      <span class="info__block-item">Tickets available -</span>
+      <span class="info__block-item info__block-item_yellow">{{ pricesInfo ? pricesInfo.restTickets : '' }}</span>
+    </div>
+    <div class="info__block">
+      <span class="info__block-item">Price range:</span>
+      <span class="info__block-item info__block-item_yellow">
+        {{ pricesInfo ? (pricesInfo.minPrice | currency:'EUR' : 'symbol' : '0.0') : '' }} -
+        {{ pricesInfo ? (pricesInfo.maxPrice | currency:'EUR' : 'symbol' : '0.0') : '' }}
+      </span>
+    </div>
+    <button class="info__button"
+      (click)="toTickets(eventsService.selectedEvent ? eventsService.selectedEvent.eventId : '')">
+      buy tickets
+    </button>
+  </article>
+</section>
+
+<app-loading *ngIf="eventsService.isLoadingEvents"></app-loading>
+<app-event-not-found *ngIf="!eventsService.isEventFound"></app-event-not-found>
+

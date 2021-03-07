@@ -1,0 +1,26 @@
+<section class="events">
+  <h2 class="events__title title"
+    routerLink="/events">
+    events
+  </h2>
+  <app-event-not-found
+    *ngIf="!eventsService.currentEventList.length
+    && !eventsService.isLoadingEvents"></app-event-not-found>
+  <div class="events__items"
+    *ngIf="!eventsService.isLoadingEvents && eventsService.currentEventList.length">
+    <app-event-main
+    *ngFor="let item of eventsService.currentEventList"
+    [id]="item.eventId"
+    [eventName]="item.eventName"
+    [artistName]="item.artist"
+    [eventImages]="item.images"
+    [eventStart]="item.eventStart"
+    (click)="catchSelectedEventId($event)">
+    </app-event-main>
+  </div>
+  <app-loading *ngIf="eventsService.isLoadingEvents"></app-loading>
+  <app-pagination
+    *ngIf="!eventsService.isLoadingEvents">
+  </app-pagination>
+</section>
+

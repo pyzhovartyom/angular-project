@@ -1,0 +1,11 @@
+<section class="hall">
+  <div class="hall__row" *ngFor="let row of ticketsService.hall.rows">
+    <span
+    class="hall__seat"
+    *ngFor="let seat of row"
+    [style.background]="seat.color"
+    [class.hall__seat_selected]="seat.isSelected"
+    [class.hall__seat_sold]="seat.isSold"
+    (click)="selectSeat(seat)">{{ seat.number }}</span>
+  </div>
+</section>

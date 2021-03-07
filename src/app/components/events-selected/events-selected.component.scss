@@ -1,0 +1,71 @@
+$yellow: #ffd900;
+
+:host {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.events-selected {
+  display: flex;
+  font-family: FuturaFuturis-bold, sans-serif;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+
+  &__description {
+    font-family: DIN Pro-Regular, sans-serif;
+    font-size: .85rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+  }
+
+  &__block {
+    margin-bottom: 1rem;
+  }
+
+  &__block-item {
+    font-size: 1.3rem;
+  }
+
+  &__block-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  &__block-item_yellow {
+    color: $yellow;
+  }
+
+  &__button {
+    background: none;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    color: $yellow;
+    font-family: inherit;
+    font-size: 2rem;
+    outline: none;
+    padding-top: .4rem;
+    text-transform: uppercase;
+    transition: .5s;
+    width: 210px;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s;
+  }
+}

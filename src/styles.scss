@@ -1,0 +1,90 @@
+@import url(./assets/styles/reset.css);
+@import url(./app/components/button-grey/button-grey.component.scss);
+@import url(./app/components/title/title.component.scss);
+
+@font-face {
+  font-family: DIN Pro-Black;
+  src: url(./assets/fonts/DINPro-Black.otf) format("opentype");
+}
+
+@font-face {
+  font-family: DIN Pro-Light;
+  src: url(./assets/fonts/DINPro-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: DIN Pro-Regular;
+  src: url(./assets/fonts/DINPro-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: FuturaFuturis-bold;
+  src: url(./assets/fonts/FuturaFuturis-bold.OTF) format("opentype");
+}
+
+@font-face {
+  font-family: FuturaFuturis;
+  src: url(./assets/fonts/FuturaFuturis.OTF) format("opentype");
+}
+
+$grey-color: #868685;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  color: $grey-color;
+  display: block;
+  font-family: DIN Pro-Light, sans-serif;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.fc .fc-toolbar {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.2rem !important;
+  margin-bottom: .5rem !important;
+}
+
+.fc .fc-button-primary {
+  background-color: #07ace8 !important;
+  border: none !important;
+  opacity: 1 !important;
+  outline: none !important;
+  padding: .1rem .3rem  !important;
+}
+
+.fc .fc-scroller-liquid-absolute {
+  overflow: hidden !important;
+}
+
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  height: 0 !important;
+  min-height: 0 !important;
+}
+
+.fc .fc-daygrid-day-events {
+  margin-top: 0 !important;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 0 !important;
+}
+
+.fc-daygrid-day {
+  &:hover {
+    background: rgba(7, 172, 232, .2);
+    cursor: pointer;
+  }
+  &:active {
+    background: rgba(7, 172, 232, .4);
+  }
+}

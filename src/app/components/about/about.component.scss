@@ -1,0 +1,41 @@
+:host {
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    width: 800px;
+  }
+
+  &__image {
+    align-items: center;
+    background: url(../../../assets/images/blur_about.jpg);
+    display: flex;
+    justify-content: center;
+    height: 332px;
+    width: 100%;
+  }
+
+  &__subtitle {
+    border: 5px solid #fff;
+    color: #fff;
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    text-align: justify;
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

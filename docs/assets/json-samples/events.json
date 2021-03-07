@@ -1,0 +1,308 @@
+[
+  {
+    "eventId": "123",
+    "eventStatus": 1,
+    "eventName": "World Tour 2018",
+    "artist": "Lady Gaga",
+    "eventStart": 82093309860,
+    "eventDurationHours": 5,
+    "hall": 1,
+    "eventType": 1,
+    "description": "Nulla teasfsfasdfsdfdafsdf sasdfsdfdf mpor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "5L",
+            "6L"
+          ],
+          "5": [
+            "7M",
+            "8M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "1234",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady Gaga Lady",
+    "eventStart": 84093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-2-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "12345",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady Gaga121 Lady",
+    "eventStart": 85093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "123456",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady 345aga Lady",
+    "eventStart": 86093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-1-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "1234567",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady 345345 Lady",
+    "eventStart": 87093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "12345678",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Gaga Lady",
+    "eventStart": 88093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-1-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "1234562347",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady Gaga Lady",
+    "eventStart": 89093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-2-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "1234567234324234",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady Gaga Lady",
+    "eventStart": 90093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  },
+  {
+    "eventId": "1234567234234",
+    "eventStatus": 1,
+    "eventName": "World Tour 2020",
+    "artist": "Lady Gaga Lady",
+    "eventStart": 91093309980,
+    "eventDurationHours": 2,
+    "hall": 2,
+    "eventType": 1,
+    "description": "Nulla tempor malesuada erat, at posuere tortor varius at. Aenean ac neque etdolor eleifend mattis.",
+    "images": [
+      "../../../assets/images/sample-400x400.jpg"
+    ],
+    "priceRanges": [
+      {
+        "seats": {
+          "1": [
+            "4L",
+            "9L"
+          ],
+          "7": [
+            "4M",
+            "5M"
+          ]
+        },
+        "price": 120,
+        "color": "color"
+      }
+    ],
+    "managers": [
+      "aaaaa@bbbbbb.com",
+      "bbbbb@aaaaa.com"
+    ]
+  }
+]

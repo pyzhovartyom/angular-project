@@ -1,0 +1,23 @@
+<div class="shopping-list">
+  <div class="shopping-list__row">
+    <span class="shopping-list__text">Row</span>
+    <span class="shopping-list__text">Place</span>
+    <span class="shopping-list__text">Sum</span>
+  </div>
+  <div class="shopping-list__row_overflow">
+    <div
+    class="shopping-list__row shopping-list__row_ticket"
+    *ngFor="let selectedSeat of ticketsService.selectedSeats">
+      <span class="shopping-list__text">{{ selectedSeat.seatInfo.row }}</span>
+      <span class="shopping-list__text">{{ selectedSeat.seatInfo.code }}</span>
+      <i class="shopping-list__text shopping-list__text_close fa fa-times"
+        [id]="selectedSeat.id"
+        (click)="deleteSeat($event)"></i>
+    </div>
+  </div>
+  <div class="shopping-list__row">
+    <span class="shopping-list__text">{{ ticketsService.selectedSeats.length }}</span>
+    <span class="shopping-list__text">ticket(s)</span>
+    <span class="shopping-list__text">{{ ticketsService.sumToPay | currency:'EUR':'symbol':'0.0'}}</span>
+  </div>
+</div>

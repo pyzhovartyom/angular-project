@@ -1,0 +1,16 @@
+<div class="event">
+  <img class="event__image"
+    [src]="eventValidImage"
+    alt="event-image" >
+  <p class="event__date">
+    {{ eventStart | date:'d MMMM' }}
+  </p>
+  <div class="event__info">
+    <h3 class="event__title">
+      {{ artistName }}
+    </h3>
+    <h4 class="event__subtitle">
+      {{ eventName }}
+    </h4>
+  </div>
+</div>

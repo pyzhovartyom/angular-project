@@ -1,0 +1,11 @@
+<div class="selected-event-title__info">
+  <span class="selected-event-title__name">
+    {{ eventsService.selectedEvent ? eventsService.selectedEvent.artist : 'test' }}
+  </span>
+  <span class="selected-event-title__name selected-event-title__name_border">
+    {{ eventsService.selectedEvent ? eventsService.selectedEvent.eventName : 'test'}}
+  </span>
+  <span class="selected-event-title__name">
+    {{ eventsService.selectedEvent ? (eventsService.selectedEvent.eventStart | date:'d MMMM y') : 'test'}}
+  </span>
+</div>

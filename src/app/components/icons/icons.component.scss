@@ -1,0 +1,26 @@
+.icons {
+  display: flex;
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: .3rem;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
+
+  &__item {
+    font-size: 1.4rem;
+    transition: .5s;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: .5s;
+  }
+
+}

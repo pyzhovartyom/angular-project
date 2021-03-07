@@ -1,0 +1,81 @@
+<section class="login" *ngIf="userService.isLoginOpened">
+  <h2 class="login__title title">login</h2>
+  <div class="login__content">
+    <div class="login__block-left">
+      <h3 class="login__subtitle">I am already a customer</h3>
+      <form class="login__form" (ngSubmit)="loginUser()">
+        <div class="login__input-block">
+          <input
+            class="login__input"
+            [class.login__input_invalid]="formUserLogin.touched && formUserLogin.invalid"
+            #formUserLogin="ngModel"
+            name="formUserLogin"
+            placeholder="Email"
+            type="email"
+            [(ngModel)]="userEmail"
+            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            required>
+            <i class="login__close fa fa-times" (click)="clearEmail()"></i>
+          </div>
+          <div class="login__input-block">
+            <input
+            class="login__input"
+            name="formUserPassword"
+            #formUserPassword="ngModel"
+            placeholder="Password"
+            type="password"
+            [(ngModel)]="userPassword"
+            pattern="(.*[0-9A-Za-z].*)"
+            required>
+          <i class="login__close fa fa-times" (click)="clearPassword()"></i>
+        </div>
+        <a class="login__forgotten" routerLink="/confirmation">
+          Forgotten password?
+        </a>
+        <button
+        class="login__button-login button_grey"
+        [disabled]="formUserLogin.invalid || formUserPassword.invalid"
+        type="submit">
+          Login
+        </button>
+      </form>
+    </div>
+    <div class="login__block-right">
+      <h3 class="login__subtitle">New customer</h3>
+      <button
+        class="login__button-register button_grey"
+        type="button"
+        routerLink="/register">
+        Register
+    </button>
+      <button
+        class="login__button-code button_grey"
+        type="button"
+        routerLink="/confirmation">
+        Login with an invitation code
+    </button>
+    </div>
+  </div>
+</section>
+
+<app-loading *ngIf="userService.isLoading"></app-loading>
+
+<div class="result" *ngIf="!userService.isLoginOpened && !userService.isLoading">
+  <div class="result__block" *ngIf="userService.isUserFailed && !userService.isLoading">
+    <p class="result__title">
+      User Not Found
+    </p>
+    <p class="result__title">
+      try again
+    </p>
+    <i class="result__icon result__icon_error fa fa-exclamation"></i>
+    <button
+    class="result__button button_grey"
+    (click)="returnToLogin()"
+    >login</button>
+  </div>
+  <app-login-user
+    *ngIf="userService.isUserLogin && !userService.isLoading"
+    class="success">
+  </app-login-user>
+</div>

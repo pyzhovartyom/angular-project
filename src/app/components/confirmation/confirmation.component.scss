@@ -1,0 +1,30 @@
+:host {
+  align-items: center;
+  background: rgba($color: #fff, $alpha: .8);
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.confirmation {
+  &__input {
+    border: none;
+    border-bottom: 1px solid #868685;
+    font-family: FuturaFuturis, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: .7;
+    outline: none;
+    width: 300px;
+  }
+
+  &__button {
+    width: 150px;
+  }
+}

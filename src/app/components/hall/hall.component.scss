@@ -1,0 +1,48 @@
+$basic-color: #07ace8;
+
+.hall {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: .4rem;
+    }
+  }
+
+  &__seat {
+    border: 1px solid $basic-color;
+    border-right: none;
+    color: $basic-color;
+    display: inline-block;
+    font-size: .85rem;
+    padding: .1rem;
+    text-align: center;
+    width: 20px;
+
+    &_selected {
+      background: #07e812 !important;
+    }
+
+    &:hover {
+      background: $basic-color !important;
+      color: #fafafa;
+      cursor: pointer;
+    }
+
+    &_sold {
+      background: red !important;
+      color: #fafafa !important;
+
+      &:hover {
+        background: red !important;
+        cursor: default !important;
+      }
+    }
+
+    &:last-child {
+      border-right: 1px solid $basic-color;
+    }
+  }
+}

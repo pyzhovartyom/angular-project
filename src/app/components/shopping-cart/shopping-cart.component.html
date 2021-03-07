@@ -1,0 +1,44 @@
+<app-shopping-cart-empty *ngIf="!ticketsService.selectedSeats.length"></app-shopping-cart-empty>
+<section class="shopping-cart" *ngIf="ticketsService.selectedSeats.length">
+  <h2 class="shopping-cart__title title">
+    shopping cart
+  </h2>
+  <p class="shopping-cart__warning">
+    The tickets shown here have now been reserved for you for 10 minutes.
+  </p>
+  <div class="shopping-cart__content">
+    <button
+      class="shopping-cart__delete"
+      (click)="deleteSection()">
+      Delete section
+    </button>
+    <app-selected-event-title></app-selected-event-title>
+    <app-shopping-list
+    [style.width]="'150px'"></app-shopping-list>
+    <form class="shopping-cart__bottom-line">
+      <button
+        class="shopping-cart__button button_grey"
+        routerLink="/paying"
+        [disabled]="!isChecked">
+          pay
+      </button>
+      <label class="shopping-cart__label">
+        <input
+          class="shopping-cart__input"
+          (click)="checkboxClick()"
+          type="checkbox"
+          #formTerms
+          name="formTerms"
+          required>
+        <div class="shopping-cart__terms">
+          <span class="shopping-cart__text_red">*</span>
+          <p class="shopping-cart__text">I have read the</p>
+          <a class="shopping-cart__text
+                    shopping-cart__text_link"
+                    routerLink="/terms">Terms and Conditions</a>
+          <p class="shopping-cart__text">and fully agree with them.</p>
+        </div>
+      </label>
+    </form>
+  </div>
+</section>

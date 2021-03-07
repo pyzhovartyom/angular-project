@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header__logo">
+    <img
+    class="header__image"
+    src="../../../assets/logo/logo_white.svg"
+    alt="logo_white"
+    routerLink="/">
+  </div>
+  <div class="header__info">
+    <div class="header__line">
+      <h1 class="header__title">
+        {{ settingsService.fullName }}
+      </h1>
+      <app-icons class="header__icons">
+      </app-icons>
+    </div>
+    <div class="header__line">
+      <a class="header__login" routerLink="/login">
+        LOGIN
+      </a>
+      <i class="header__burger fa fa-bars" (click)="actionsService.switchBurger()"></i>
+    </div>
+  </div>
+</header>
+

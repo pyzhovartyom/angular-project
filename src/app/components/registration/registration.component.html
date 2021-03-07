@@ -1,0 +1,174 @@
+<section class="registration" *ngIf="isRegistrationOpened">
+  <h2 class="registration__title title">registration</h2>
+  <form class="registration__form" (ngSubmit)="registerUser()">
+    <div class="registration__block">
+      <h3 class="registration__subtitle">Salutation and address</h3>
+      <select
+        class="registration__input"
+        name="formUserGender"
+        required>
+        <option
+        class="registration__option"
+        *ngFor="let gender of genders"
+        [value]="gender.id">{{ gender.text }}</option>
+      </select>
+      <input
+        class="registration__input"
+        type="text"
+        name="formUserName"
+        #formUserName="ngModel"
+        placeholder="Name*"
+        [(ngModel)]="userName"
+        required>
+      <input
+        class="registration__input"
+        type="text"
+        name="formUserSurname"
+        #formUserSurname="ngModel"
+        placeholder="Surname*"
+        [(ngModel)]="userSurname"
+        required>
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="Company">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="Street">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="House">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="Additional info">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="Postcode">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="City">
+      <input
+        class="registration__input"
+        type="text"
+        placeholder="Country">
+    </div>
+    <div class="registration__block">
+      <h3 class="registration__subtitle">Contact information</h3>
+      <input
+        class="registration__input"
+        type="email"
+        name="formUserEmail"
+        #formUserEmail="ngModel"
+        placeholder="Email*"
+        [(ngModel)]="userEmail"
+        pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+        required>
+      <div class="registration__password">
+        <input class="registration__input registration__input_without-border"
+        [type]="isPasswordHidden ? 'password' : 'text'"
+        name="formUserPassword"
+        #formUserPassword="ngModel"
+        placeholder="Password*"
+        [(ngModel)]="userPassword"
+        required>
+        <i class="registration__eye fa fa-eye"
+          (click)="showPassword()"
+          [style.color]="isPasswordHidden ? 'inherit' : 'red'"></i>
+      </div>
+      <div class="registration__password">
+        <input class="registration__input registration__input_without-border"
+        [type]="isPasswordConfirmHidden ? 'password' : 'text'"
+        name="formUserPasswordConfirm"
+        #formUserPasswordConfirm="ngModel"
+        placeholder="Confirm password*"
+        [(ngModel)]="userPasswordConfirm"
+        required>
+        <i class="registration__eye fa fa-eye"
+          (click)="showPasswordConfirm()"
+          [style.color]="isPasswordConfirmHidden ? 'inherit' : 'red'"></i>
+      </div>
+      <input
+        class="registration__input"
+        type="tel"
+        name="formUserPhone"
+        #formUserPhone="ngModel"
+        placeholder="Phone number*"
+        [(ngModel)]="userPhone"
+        required>
+      <input class="registration__input" type="tel" placeholder="Additional phone number">
+      <div class="registration__checkbox">
+        <input
+        class="registration__input-checkbox"
+        type="checkbox"
+        (click)="checkTerms()">
+        <p class="registration__text">
+          <span class="registration__red">*</span>
+          I have read the notice on
+          <a class="registration__link">data protection</a>
+          and the content of the
+          <a class="registration__link" routerLink="/terms">Standard Terms of Business</a>
+          and agree to the storage of my personal data.
+        </p>
+      </div>
+      <div class="registration__checkbox">
+        <input
+          class="registration__input-checkbox"
+          type="checkbox">
+        <p class="registration__text">
+          I agree to get notifications on my Email and phone
+        </p>
+      </div>
+      <button
+      class="registration__button button_grey"
+      type="submit"
+      [disabled]="
+      userPassword !== userPasswordConfirm
+      ||  !isTermsChecked
+      || formUserName.invalid
+      || formUserSurname.invalid
+      || formUserEmail.invalid
+      || formUserPassword.invalid
+      || formUserPasswordConfirm.invalid
+      || formUserPhone.invalid"
+      >Register</button>
+    </div>
+  </form>
+</section>
+
+<div class="result" *ngIf="!isRegistrationOpened">
+  <div class="result__block" *ngIf="isRegistrationFailed">
+    <p class="result__title">
+      check your data
+    </p>
+    <p class="result__title">
+      and register again
+    </p>
+    <i class="result__icon result__icon_error fa fa-exclamation"></i>
+    <button
+    class="result__button button_grey"
+    (click)="returnToRegistration()"
+    >register</button>
+  </div>
+
+  <div class="result__block" *ngIf="isRegistrationSuccess">
+    <h3 class="result__title">
+      success
+    </h3>
+    <p class="result__text">
+      {{ userEmail }}
+    </p>
+    <p class="result__text">
+      has been registered
+    </p>
+    <p class="result__text">
+      Please, log in
+    </p>
+    <i class="result__icon result__icon_check fa fa-check"></i>
+    <button class="result__button button_grey" routerLink="/login">Login</button>
+  </div>
+</div>

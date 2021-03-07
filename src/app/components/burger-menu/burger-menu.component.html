@@ -1,0 +1,81 @@
+<section class="burger">
+  <img class="burger__image" src="../../../assets/logo/logo_white.svg" alt="logo-white">
+  <div class="burger__content">
+    <div class="burger__block">
+      <h2 class="burger__title">
+        {{ settingsService.fullName }}
+      </h2>
+      <app-icons class="burger__icons"></app-icons>
+      <div class="burger__info">
+        <p class="burger__text">{{ settingsService.hallInfo.name }}</p>
+        <p class="burger__text">{{ settingsService.hallInfo.address }}</p>
+        <p class="burger__text">{{ settingsService.hallInfo.phone }}</p>
+        <p class="burger__text">{{ settingsService.hallInfo.fax }}</p>
+        <p class="burger__text">{{ settingsService.hallInfo.email }}</p>
+      </div>
+    </div>
+    <nav class="burger__menu menu">
+      <ul class="menu__wrapper">
+        <li class="menu__item menu__item_login">
+          <p class="menu__text_children">
+            <a class="menu__link"
+              routerLink="/login"
+              routerLinkActive="active"
+              (click)="actionsService.switchBurger()">
+              login/out
+            </a>
+            <i class="menu__arrow-children fa fa-sort-down"
+              [style.transform]="actionsService.isLoginLinkOpened ? 'rotate(180deg)' : 'rotate(0)'"
+              [style.transition]="actionsService.isLoginLinkOpened ? '.5s' : '.2s'"
+              (click)="actionsService.switchLoginLinkTumbler()"></i>
+            <i class="menu__close fa fa-times" (click)="actionsService.switchBurger()"></i>
+          </p>
+          <ul
+            class="menu__submenu"
+            [class.menu__submenu_show]="actionsService.isLoginLinkOpened"
+            *ngIf="actionsService.isLoginLinkOpened">
+            <li class="menu__item menu__item_hidden">
+              <a class="menu__link menu__link_hidden"
+                routerLink="/register"
+                (click)="actionsService.switchBurger()">
+                register
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link"
+            routerLink="/events"
+            routerLinkActive="active"
+            (click)="actionsService.switchBurger()">
+              events
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link"
+            routerLink="/shopping-cart"
+            routerLinkActive="active"
+            (click)="actionsService.switchBurger()">
+            shopping cart
+        </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link"
+            routerLink="/terms"
+            routerLinkActive="active"
+            (click)="actionsService.switchBurger()">
+            terms and conditions
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link"
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="actionsService.switchBurger()">
+            about us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>

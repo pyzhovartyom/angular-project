@@ -1,0 +1,86 @@
+@mixin base-font {
+  font-family: FuturaFuturis, sans-serif;
+  font-size: 1.3rem;
+};
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.success {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: column;
+    margin-left: 3rem;
+  }
+
+  &__info {
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 1.5rem;
+  }
+
+  &__name:first-child {
+    margin-right: .7rem;
+  }
+
+  &__name:last-child {
+    margin-left: .7rem;
+  }
+
+  &__name_border {
+    border-left: 5px solid #868685;
+    border-right: 5px solid #868685;
+    padding: 0 .7rem;
+  }
+
+  &__tickets {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+  }
+
+  &__congratulations {
+    @include base-font();
+    color: #07ace8;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+
+  &__return {
+    @include base-font();
+    color: inherit;
+    margin-bottom: 5rem;
+    text-decoration: none;
+  }
+
+  &__download {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__download:hover {
+    cursor: pointer;
+  }
+
+  &__download-text {
+    @include base-font();
+    margin-right: 1rem;
+  }
+
+  &__download-icon {
+    font-size: 2rem;
+  }
+}

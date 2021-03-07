@@ -1,0 +1,15 @@
+<div class="event" (click)="catchSelectedEventId($event)">
+  <div class="event__image-block">
+    <img class="event__image"
+      [src]="eventValidImage"
+      alt="event-image">
+    <p class="event__title">{{ artistName }}</p>
+  </div>
+  <div class="event__info">
+    <span class="event__date">{{ eventStart | date:'d MMMM y' }}</span>
+    <div class="event__block_margin">
+      <span class="event__time">{{ eventStart | date:'HH:mm' }}</span>
+      <button class="event__button">BUY</button>
+    </div>
+  </div>
+</div>

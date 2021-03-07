@@ -1,0 +1,24 @@
+.selected-event-title {
+  &__info {
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-family: FuturaFuturis-bold, sans-serif;
+    font-size: 1.3rem;
+
+    &:first-child {
+      margin-right: .7rem;
+    }
+
+    &:last-child {
+      margin-left: .7rem;
+    }
+
+    &_border {
+      border-left: 5px solid #868685;
+      border-right: 5px solid #868685;
+      padding: 0 .7rem;
+    }
+  }
+}

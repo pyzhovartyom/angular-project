@@ -1,0 +1,32 @@
+<section class="paying">
+  <h2 class="paying__title title">
+    paying
+  </h2>
+  <div class="paying__content">
+    <div class="paying__items">
+      <app-selected-event-title></app-selected-event-title>
+      <div class="paying__tickets">
+        <span class="paying__tickets-item">{{ ticketsService.selectedSeats.length }} tickets</span>
+        <span class="paying__tickets-item">{{ ticketsService.sumToPay | currency:'EUR':'symbol':'0.0' }}</span>
+      </div>
+      <form class="paying__methods">
+        <label class="paying__label">
+          <input class="paying__input" type="radio" name="method" checked>
+          <i class="paying__logo fa fa-cc-visa"></i>
+        </label>
+        <label class="paying__label">
+          <input class="paying__input" type="radio" name="method">
+          <i class="paying__logo fa fa-cc-mastercard"></i>
+        </label>
+        <label class="paying__label">
+          <input class="paying__input" type="radio" name="method">
+          <i class="paying__logo fa fa-cc-paypal"></i>
+        </label>
+      </form>
+    </div>
+    <button
+    class="paying__button button_grey"
+    routerLink="/proceed-paying"
+    (click)="ticketsService.ticketsToLocalStorage()">Pay</button>
+  </div>
+</section>

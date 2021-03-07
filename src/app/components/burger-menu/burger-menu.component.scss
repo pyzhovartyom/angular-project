@@ -1,0 +1,146 @@
+:host {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+@keyframes showItems {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+@keyframes display-submenu {
+  from { margin-top: -30px; } to { margin-top: 0; }
+}
+
+.burger {
+  animation: .5s showItems;
+  background: #696a6d;
+  color: #f3f4f4;
+  display: flex;
+  font-family: DIN Pro-Regular, sans-serif;
+  justify-content: space-between;
+  height: 275px;
+  margin: 0 auto;
+  padding-left: 8rem;
+  width: 100%;
+
+  &__image {
+    height: 90px;
+    margin-top: 3.5rem;
+    width: 200px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1.5rem 6rem 2.5rem 0;
+    width: 75%;
+  }
+
+  &__block {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__icons {
+    left: 20px;
+    position: absolute;
+    top: 50px;
+    transform: scale(1.3);
+  }
+
+}
+
+.menu {
+  margin-top: 1.5rem;
+
+  &__close {
+    font-size: 1.7rem;
+    transition: .5s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      transition: .5s;
+    }
+  }
+
+  &__submenu {
+
+    &_show {
+      animation: .5s display-submenu, 1.2s showItems;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    width: 250px;
+
+    &:not(:last-child) {
+      margin-bottom: .3rem;
+    }
+
+    &_login {
+      align-items: center;
+      display: flex;
+      flex-flow: column;
+    }
+
+    &_children {
+      display: flex;
+      flex-flow: column;
+    }
+
+    &_margin {
+      margin-top: .3rem;
+    }
+
+  }
+
+  &__text_children {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &_children {
+      margin-right: 1rem;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover {
+      opacity: .8;
+      transition: .5s;
+    }
+
+    &.active {
+      color: #07ace8;
+    }
+
+    &_hidden {
+      display: inline-block;
+      color: #ffd900 !important;
+      font-size: .9rem;
+      padding: .3rem 0;
+    }
+  }
+
+  &__arrow-children {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,46 @@
+$color-blue: #07ace8;
+
+:host {
+  width: 25%;
+}
+
+.calendar {
+  display: flex;
+  flex-flow: column;
+
+  &__full-calendar {
+    margin-bottom: 1rem;
+  }
+
+  &__date {
+    margin-bottom: .3rem;
+
+    &_title {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    color: $color-blue;
+    font-family: FuturaFuturis-bold, sans-serif;
+    margin-bottom: .5rem;
+    text-align: center;
+  }
+
+  &__arrow {
+    color: $color-blue;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: .5rem;
+  }
+}
+
+.title {
+  font-family: DIN Pro-Regular, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,45 @@
+<aside class="sidebar">
+
+  <div class="sidebar__calendar calendar">
+    <h3 class="calendar__title title">
+      Calendar
+    </h3>
+    <full-calendar
+    class="calendar__full-calendar"
+    [options]="calendarOptions"></full-calendar>
+    <div class="calendar__text" *ngIf="eventsService.calendarCounter !== 0">
+      <p class="calendar__date calendar__date_title">
+        selected dates
+      </p>
+      <p class="calendar__date">
+        Start date: {{ dateRangesStr.dateFrom | date :'d MMMM y'}}
+      </p>
+      <p class="calendar__date">
+        End date: {{ dateRangesStr.dateTo | date :'d MMMM y'}}
+      </p>
+    </div>
+    <p class="calendar__text" *ngIf="eventsService.calendarCounter === 0">
+      Select dates for searching events
+    </p>
+    <i class="calendar__arrow fa fa-arrow-up"></i>
+    <button class="calendar__button button_grey"
+    *ngIf="eventsService.dateRanges.dateFrom !== 1564952400000
+    || eventsService.dateRanges.dateTo !== 1618866000000"
+    (click)="eventsService.resetPages()">Reset dates</button>
+  </div>
+
+  <div class="sidebar__events events" *ngIf="!eventsService.isLoadingSidebar">
+    <h3 class="events__title title">
+      Upcoming Events
+    </h3>
+    <app-event-mini
+    class="events__event-item"
+    *ngFor="let item of eventsService.upcomingEventList"
+    [id]="item.eventId"
+    [artistName]="item.artist"
+    [eventImages]="item.images"
+    [eventStart]="item.eventStart ? item.eventStart : 0">
+    </app-event-mini>
+  </div>
+  <app-loading *ngIf="eventsService.isLoadingSidebar"></app-loading>
+</aside>

@@ -1,0 +1,33 @@
+<section class="tickets" *ngIf="!eventsService.isLoadingEvents && eventsService.isEventFound">
+  <h2 class="tickets__title title">tickets</h2>
+  <app-selected-event-title></app-selected-event-title>
+  <div class="tickets__content">
+    <app-hall
+    class="tickets__hall"></app-hall>
+    <div class="tickets__prices-block">
+      <div class="tickets__prices">
+        <p class="tickets__prices-title">
+          Price range:
+        </p>
+        <div
+        class="tickets__prices-item"
+        *ngFor="let item of (ticketsService.selectedEventHallData
+        ? ticketsService.selectedEventHallData.priceRanges
+        : ticketsService.fakePriceRange)"
+        [style.background]="item.color">
+          {{ item.price | currency: "EUR" : "symbol" : "0.0"}}
+        </div>
+      </div>
+      <app-shopping-list class="tickets__list"></app-shopping-list>
+      <button
+        class="tickets__button button_grey"
+        routerLink="/shopping-cart"
+        >
+        to the cart
+      </button>
+    </div>
+  </div>
+</section>
+
+<app-loading *ngIf="eventsService.isLoadingEvents"></app-loading>
+<app-event-not-found *ngIf="!eventsService.isEventFound"></app-event-not-found>

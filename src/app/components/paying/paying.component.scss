@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  height: 500px;
+  width: 100%;
+}
+
+.paying {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    border: 1px solid #868685;
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    width: 800px;
+  }
+
+  &__tickets {
+    display: flex;
+    font-family: FuturaFuturis, sans-serif;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    width: 200px;
+  }
+
+  &__methods {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+
+  &__label {
+    align-items: center;
+    display: flex;
+  }
+
+  &__label:hover {
+    cursor: pointer;
+  }
+
+  &__label:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__input {
+    margin: 0;
+    margin-right: .5rem;
+  }
+
+  &__logo {
+    font-size: 3rem;
+  }
+
+  &__button {
+    align-self: flex-end;
+    width: 250px;
+  }
+}

@@ -1,0 +1,21 @@
+<section class="success">
+  <h2 class="success__title title">
+    success
+  </h2>
+  <div class="success__content">
+    <app-selected-event-title class="success__info"></app-selected-event-title>
+    <div class="success__tickets">
+      <span class="success__tickets-item">{{ ticketsService.selectedSeats.length }} tickets</span>
+      <span class="success__tickets-item">{{ ticketsService.sumToPay | currency:'EUR':'symbol':'0.0'}}</span>
+    </div>
+    <p class="success__congratulations">
+      Congratulations! You’ve successfully payed. Your PDF ticket have been sent to your email. We wish you a pleasant
+      time at our Berlin City Hall
+    </p>
+    <a class="success__return" routerLink="/">Return to the main page</a>
+    <div class="success__download">
+      <p class="success__download-text" (click)="download()">Download your ticket</p>
+      <i class="success__download-icon fa fa-download"></i>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  height: 350px;
+  padding: 1.2rem 0;
+  width: 100%;
+}
+
+.login-user {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  font-family: FuturaFuturis-bold, sans-serif;
+  justify-content: space-between;
+  width: 100%;
+
+  &__title {
+    font-size: 1.7rem;
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+
+  &__user {
+    color: #ffd900;
+    font-size: 1.6rem;
+  }
+
+  &__return {
+    width: 220px;
+  }
+
+  &__logout {
+    width: 150px;
+  }
+}

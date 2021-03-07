@@ -1,0 +1,17 @@
+:host {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.admin {
+  width: 800px;
+
+  &__item {
+    border-bottom: 2px solid #868685;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}

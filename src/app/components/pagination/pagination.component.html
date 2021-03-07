@@ -1,0 +1,13 @@
+<div class="pagination"
+  [style.justifyContent]="eventsService.currentPage > 0
+    && eventsService.currentPage < eventsService.pages
+    ? 'space-between'
+    : 'center'">
+  <button class="pagination__button button_grey"
+  *ngIf="eventsService.currentPage > 0"
+  (click)="eventsService.toPrevPage()">Prev page</button>
+  <button class="pagination__button button_grey"
+  *ngIf="eventsService.currentPage !== eventsService.pages
+  && eventsService.pages > 0"
+  (click)="eventsService.toNextPage()">Next page</button>
+</div>
